@@ -318,6 +318,7 @@ input[type='button']:hover {
 
     .card {
         max-width: 57.5rem;
+        margin: 0;
     }
 
     .card>div {
