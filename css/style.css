@@ -267,7 +267,7 @@ input[type='button']:hover {
 }
 
 
-@media (min-width: 1020px) {
+@media (min-width: 1050px) {
     h2 {
         font-size: 2.73rem;
         padding-bottom: 2.2rem;
