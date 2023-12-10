@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+/* end of css reset */
+:root {
+    --bright_orange: hsl(31, 77%, 52%);
+    --dark_cyan: hsl(184, 100%, 22%);
+    --very_dark_cyan: hsl(179, 100%, 13%);
+    --transparent_white: hsla(0, 0%, 100%, 0.75);
+    --very_light_gray: hsl(0, 0%, 95%);
+}
+
+.sr-only {
+    display: none;
+}
+
+body,
+input[type='button'] {
+    font-family: "Lexend Deca", sans-serif;
+    background-color: var(--very_light_gray);
+}
+
+main {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-family: "Big Shoulders Display", sans-serif;
+    font-weight: 700;
+    color: var(--very_light_gray);
+    font-size: 2.47rem;
+    letter-spacing: 0.02rem;
+    padding-bottom: 1.9rem;
+}
+
+h2::before {
+    content: "";
+    display: block;
+    margin-bottom: 2.1rem;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    width: 4.3rem;
+    height: 2.9rem;
+
+}
+
+p {
+    color: var(--transparent_white);
+    letter-spacing: 0.019rem;
+    line-height: 1.55rem;
+    font-size: 0.904rem;
+    margin-bottom: 1.55rem;
+}
+
+input[type='button'] {
+    height: 3rem;
+    width: 9.1rem;
+    border-radius: 25px;
+    background-color: var(--very_light_gray);
+    border: none;
+    font-size: 0.85rem;
+    letter-spacing: 0.065rem;
+    cursor: pointer;
+}
+
+
+.sedan-section input {
+    color: var(--bright_orange);
+}
+
+.suv-section input {
+    color: var(--dark_cyan);
+}
+
+.luxury-section input {
+    color: var(--very_dark_cyan);
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.card {
+    max-width: 20.4rem;
+    margin: auto 20px;
+}
+
+.card>div {
+    padding: 3rem;
+}
+
+.sedan-section {
+    background-color: var(--bright_orange);
+    border-radius: 10px 10px 0 0;
+}
+
+#sedan::before {
+    background-image: url('../images/icon-sedans.svg');
+
+}
+
+.suv-section {
+    background-color: var(--dark_cyan);
+}
+
+#suv::before {
+    background-image: url('../images/icon-suvs.svg');
+}
+
+.luxury-section {
+    background-color: var(--very_dark_cyan);
+    border-radius: 0 0 10px 10px;
+}
+
+#luxury::before {
+    background-image: url('../images/icon-luxury.svg');
+}
+
+
+input[type='button']:hover {
+    border: 3px solid var(--very_light_gray);
+    background-color: transparent;
+    color: var(--very_light_gray);
+}
+
+
+@media (min-width: 1020px) {
+    h2 {
+        font-size: 2.73rem;
+        padding-bottom: 2.2rem;
+    }
+
+    h2::before {
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 4.3rem;
+        height: 2.9rem;
+        margin-bottom: 2.55rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.75rem;
+        margin-bottom: 5.6rem;
+    }
+
+    input[type='button'] {
+        width: 10.1rem;
+        height: 3.35rem;
+        border-radius: 30px;
+        font-size: 1rem;
+        letter-spacing: 0.045rem;
+    }
+
+    .flex-container {
+        flex-direction: row;
+    }
+
+    .card {
+        max-width: 63.92rem;
+    }
+
+    .card>div {
+        padding: 3.3rem;
+        width: 33.333%;
+    }
+
+    .sedan-section {
+        border-radius: 10px 0 0 10px;
+    }
+
+    .luxury-section {
+        border-radius: 0 10px 10px 0;
+    }
+
+    .suv-section>p {
+        letter-spacing: 0.021rem;
+    }
+}
